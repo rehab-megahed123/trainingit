@@ -39,4 +39,6 @@ class CustomerModel {
         "title": title,
         "completed": completed,
       };
+
+  getCustomersData() {}
 }

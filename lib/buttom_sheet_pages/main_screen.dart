@@ -10,53 +10,18 @@ class mains extends StatefulWidget {
 }
 
 class _mainscreenState extends State<mains> {
-  /* List<Todosmodel> todos = [];
-  bool isLoading = true;
-  gettodos() async {
-    todos = await Todosmodel().getUsersData();
-    isLoading = false;
-    setState(() {});
-    print(todos.length);
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    gettodos();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return isLoading
-        ? Center(
-            child: CircularProgressIndicator(),
-          )
-        : ListView.builder(
-            itemCount: todos.length,
-            itemBuilder: (BuildContext context, int index) {
-              return ListTile(
-                title: Text(
-                  todos[index].title ?? "--",
-                  style: TextStyle(color: Colors.black),
-                ),
-                dense: (todos[index].completed),
-              );
-            },
-          );
-  }
-}*/
   List<CustomerModel> customers = [];
 
   bool isLoading = true;
 
   getCustomers() async {
-    // customers = await CustomerModel().getCustomersData();
+    customers = await CustomerModel().getCustomersData();
     isLoading = false;
     setState(() {});
   }
 
   @override
-  void initstate() {
+  void initState() {
     super.initState();
     getCustomers();
   }
